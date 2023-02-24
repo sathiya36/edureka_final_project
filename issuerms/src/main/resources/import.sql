@@ -1,0 +1,8 @@
+insert into issuer_data (isbn,cust_Id,no_of_copies) values ('DADASD654564564',1234,1)
+insert into issuer_data (isbn,cust_Id,no_of_copies) values ('DADASqweqweq564',2131,1)
+insert into issuer_data (isbn,cust_Id,no_of_copies) values ('DADAadsdasa4564',5345,1)
+insert into issuer_data (isbn,cust_Id,no_of_copies) values ('DAsadasdasda564',7345,1)
+insert into issuer_data (isbn,cust_Id,no_of_copies) values ('DADsadsdsda4564',5234,1)
+insert into issuer_data (isbn,cust_Id,no_of_copies) values ('DADewrwe4564564',2342,1)
+insert into issuer_data (isbn,cust_Id,no_of_copies) values ('DADAgfgdfgd4564',2342,1)
+insert into issuer_data (isbn,cust_Id,no_of_copies) values ('DADA32423564564',3423,1)

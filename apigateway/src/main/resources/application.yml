@@ -1,0 +1,41 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: apigateway
+  cloud:
+    gateway:
+      discovery.locator:
+        enabled: false
+        lowerCaseServiceId: true
+
+      routes:
+        - id: booksmsclientid
+          uri: lb://bookms-client
+          predicates:
+            - Path= /dummy-bookmsclient/**
+          filters:
+            - RewritePath= /dummy-bookmsclient/(?<path>.*), /$\{path}
+
+        - id: issuermsclientid
+          uri: lb://issuerms-client
+          predicates:
+            - Path= /dummy-issuerms-client/**
+          filters:
+            - RewritePath= /dummy-issuerms-client/(?<path>.*), /$\{path}
+
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
