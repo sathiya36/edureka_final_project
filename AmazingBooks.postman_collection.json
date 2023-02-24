@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "07959fc4-8208-4af3-ad3b-4430cc7feec0",
+		"name": "AmazingBooks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7544681"
+	},
+	"item": [
+		{
+			"name": "GetAllBooks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NzM0OTM3MywianRpIjoiQnI3WC0wcVdGQlRjUElJWUozSWxZUFVlbG9JIiwiY2xpZW50X2lkIjoiY2xpZW50In0.Q-yoF2qkpUDtodhWAsfhN2QnDD8nqkx53T9rPypUH20",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/dummy-bookmsclient/books-client/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"dummy-bookmsclient",
+						"books-client",
+						"books"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetAllBooksResponse",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NzM0OTM3MywianRpIjoiQnI3WC0wcVdGQlRjUElJWUozSWxZUFVlbG9JIiwiY2xpZW50X2lkIjoiY2xpZW50In0.Q-yoF2qkpUDtodhWAsfhN2QnDD8nqkx53T9rPypUH20",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/dummy-bookmsclient/books-client/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"dummy-bookmsclient",
+								"books-client",
+								"books"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 17:24:30 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1 ; mode=block"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"isbn\": \"DADASD654564564\",\n        \"title\": \"Fairy tales\",\n        \"publishedDate\": \"1996-12-21T18:30:00.000+00:00\",\n        \"totalCopies\": 100,\n        \"issuedCopies\": 0,\n        \"author\": \"Miguel de Cervantes\"\n    },\n    {\n        \"id\": 2,\n        \"isbn\": \"DADASqweqweq564\",\n        \"title\": \"The Divine Comedy\",\n        \"publishedDate\": \"1996-12-21T18:30:00.000+00:00\",\n        \"totalCopies\": 100,\n        \"issuedCopies\": 0,\n        \"author\": \"Geoffrey Chaucer\"\n    },\n    {\n        \"id\": 3,\n        \"isbn\": \"DADAadsdasa4564\",\n        \"title\": \"The Book Of Job\",\n        \"publishedDate\": \"1996-12-21T18:30:00.000+00:00\",\n        \"totalCopies\": 100,\n        \"issuedCopies\": 0,\n        \"author\": \"Anton Chekhov\"\n    },\n    {\n        \"id\": 4,\n        \"isbn\": \"DAsadasdasda564\",\n        \"title\": \"The Decameron\",\n        \"publishedDate\": \"1996-12-21T18:30:00.000+00:00\",\n        \"totalCopies\": 100,\n        \"issuedCopies\": 0,\n        \"author\": \"Awwai\"\n    },\n    {\n        \"id\": 5,\n        \"isbn\": \"DADsadsdsda4564\",\n        \"title\": \"The Stranger\",\n        \"publishedDate\": \"1996-12-21T18:30:00.000+00:00\",\n        \"totalCopies\": 100,\n        \"issuedCopies\": 0,\n        \"author\": \"Sathiya\"\n    },\n    {\n        \"id\": 6,\n        \"isbn\": \"DADewrwe4564564\",\n        \"title\": \"Don Quijote De La Mancha\",\n        \"publishedDate\": \"1996-12-21T18:30:00.000+00:00\",\n        \"totalCopies\": 100,\n        \"issuedCopies\": 0,\n        \"author\": \"Joseph Conrad\"\n    },\n    {\n        \"id\": 7,\n        \"isbn\": \"DADAgfgdfgd4564\",\n        \"title\": \"Great Expectations\",\n        \"publishedDate\": \"1996-12-21T18:30:00.000+00:00\",\n        \"totalCopies\": 100,\n        \"issuedCopies\": 0,\n        \"author\": \"Charles Dickens\"\n    },\n    {\n        \"id\": 8,\n        \"isbn\": \"DADA32423564564\",\n        \"title\": \"Jacques the Fatalist\",\n        \"publishedDate\": \"1996-12-21T18:30:00.000+00:00\",\n        \"totalCopies\": 100,\n        \"issuedCopies\": 0,\n        \"author\": \"Denis Diderot\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Add New Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NzM0OTM3MywianRpIjoiQnI3WC0wcVdGQlRjUElJWUozSWxZUFVlbG9JIiwiY2xpZW50X2lkIjoiY2xpZW50In0.Q-yoF2qkpUDtodhWAsfhN2QnDD8nqkx53T9rPypUH20",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"isbn\": \"DADASD13123564564\",\r\n  \"title\": \"Basics of Electronics\",\r\n  \"publishedDate\": \"2023-02-24\",\r\n  \"totalCopies\": 100,\r\n  \"issuedCopies\": 0,\r\n  \"author\": \"RS Sedha\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/dummy-bookmsclient/books-client/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"dummy-bookmsclient",
+						"books-client",
+						"books"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add New Book Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NzM0OTM3MywianRpIjoiQnI3WC0wcVdGQlRjUElJWUozSWxZUFVlbG9JIiwiY2xpZW50X2lkIjoiY2xpZW50In0.Q-yoF2qkpUDtodhWAsfhN2QnDD8nqkx53T9rPypUH20",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"isbn\": \"DADASD13123564564\",\r\n  \"title\": \"Basics of Electronics\",\r\n  \"publishedDate\": \"2023-02-24\",\r\n  \"totalCopies\": 100,\r\n  \"issuedCopies\": 0,\r\n  \"author\": \"RS Sedha\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/dummy-bookmsclient/books-client/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"dummy-bookmsclient",
+								"books-client",
+								"books"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 17:39:24 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1 ; mode=block"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 9,\n    \"isbn\": \"DADASD13123564564\",\n    \"title\": \"Basics of Electronics\",\n    \"publishedDate\": \"2023-02-24T00:00:00.000+00:00\",\n    \"totalCopies\": 100,\n    \"issuedCopies\": 0,\n    \"author\": \"RS Sedha\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GetBookByISBN",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NzM0OTM3MywianRpIjoiQnI3WC0wcVdGQlRjUElJWUozSWxZUFVlbG9JIiwiY2xpZW50X2lkIjoiY2xpZW50In0.Q-yoF2qkpUDtodhWAsfhN2QnDD8nqkx53T9rPypUH20",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/dummy-bookmsclient/books-client/booksbyisbn/DADASD13123564564",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"dummy-bookmsclient",
+						"books-client",
+						"booksbyisbn",
+						"DADASD13123564564"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Issued Books",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NzM0OTM3MywianRpIjoiQnI3WC0wcVdGQlRjUElJWUozSWxZUFVlbG9JIiwiY2xpZW50X2lkIjoiY2xpZW50In0.Q-yoF2qkpUDtodhWAsfhN2QnDD8nqkx53T9rPypUH20",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/dummy-issuerms-client/issuedbooks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"dummy-issuerms-client",
+						"issuedbooks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Issued Books",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIl0sImV4cCI6MTY3NzM0OTM3MywianRpIjoiQnI3WC0wcVdGQlRjUElJWUozSWxZUFVlbG9JIiwiY2xpZW50X2lkIjoiY2xpZW50In0.Q-yoF2qkpUDtodhWAsfhN2QnDD8nqkx53T9rPypUH20",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/dummy-issuerms-client/issuedbooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"dummy-issuerms-client",
+								"issuedbooks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Feb 2023 18:01:36 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1 ; mode=block"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						}
+					],
+					"cookie": [],
+					"body": "[\n  {\n    \"id\": 1,\n    \"isbn\": \"DADASD654564564\",\n    \"custId\": 1234,\n    \"noOfCopies\": 1\n  },\n  {\n    \"id\": 2,\n    \"isbn\": \"DADASqweqweq564\",\n    \"custId\": 2131,\n    \"noOfCopies\": 1\n  },\n  {\n    \"id\": 3,\n    \"isbn\": \"DADAadsdasa4564\",\n    \"custId\": 5345,\n    \"noOfCopies\": 1\n  },\n  {\n    \"id\": 4,\n    \"isbn\": \"DAsadasdasda564\",\n    \"custId\": 7345,\n    \"noOfCopies\": 1\n  },\n  {\n    \"id\": 5,\n    \"isbn\": \"DADsadsdsda4564\",\n    \"custId\": 5234,\n    \"noOfCopies\": 1\n  },\n  {\n    \"id\": 6,\n    \"isbn\": \"DADewrwe4564564\",\n    \"custId\": 2342,\n    \"noOfCopies\": 1\n  },\n  {\n    \"id\": 7,\n    \"isbn\": \"DADAgfgdfgd4564\",\n    \"custId\": 2342,\n    \"noOfCopies\": 1\n  },\n  {\n    \"id\": 8,\n    \"isbn\": \"DADA32423564564\",\n    \"custId\": 3423,\n    \"noOfCopies\": 1\n  }\n]"
+				}
+			]
+		},
+		{
+			"name": "Issue a Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n  \"isbn\": \"DADASD13123564564\",\r\n  \"custId\": 45687,\r\n  \"noOfCopies\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/dummy-issuerms-client/issuebooks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"dummy-issuerms-client",
+						"issuebooks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
