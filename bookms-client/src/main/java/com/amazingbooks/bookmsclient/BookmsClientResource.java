@@ -25,7 +25,7 @@ public class BookmsClientResource {
             })
     public Object getBooksFromBooksms() {
         LOGGER.info("Calling Books Microservice - To Get All Books");
-        return restTemplate.getForObject("http://bookms/books", Object.class);
+        return restTemplate.getForObject("http:bookms/books", Object.class);
     }
 
     @GetMapping("/books-client/books/{id}")
@@ -36,18 +36,18 @@ public class BookmsClientResource {
     )
     public Object getbooksByIdFrombookms(@PathVariable Integer id) {
         LOGGER.info("Calling books Microservice - To Get book by Id");
-        return restTemplate.getForObject("http://bookms/books/{id}", Object.class,id);
+        return restTemplate.getForObject("http:bookms/books/{id}", Object.class,id);
     }
 
     @PostMapping("/books-client/books")
-  //  @HystrixCommand(fallbackMethod = "createbooksFromFallback",
-   //         commandProperties = {
-   //                 @HystrixProperty(name="execution.isolation.strategy", value="SEMAPHORE")
-   //         }
-  //  )
+    @HystrixCommand(fallbackMethod = "createbooksFromFallback",
+            commandProperties = {
+                    @HystrixProperty(name="execution.isolation.strategy", value="SEMAPHORE")
+            }
+    )
     public Object createbooksinbookms(@RequestBody Book book) {
         LOGGER.info("Calling books Microservice - To Create a book");
-        return restTemplate.postForObject("http://bookms/books",book,Book.class);
+        return restTemplate.postForObject("http:bookms/books",book,Book.class);
 
     }
 
@@ -59,19 +59,19 @@ public class BookmsClientResource {
     )
     public Object updatebookinbookms(@PathVariable Integer id,@RequestBody Book book) {
         LOGGER.info("Calling books Microservice - To Update a book");
-        restTemplate.put("http://bookms/books/{id}",book,id);
+        restTemplate.put("http:bookms/books/{id}",book,id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PutMapping("/books-client/updatebooksbyisbn/{isbn}")
-    //@HystrixCommand(fallbackMethod = "updatebooksbyisbnFromFallback",
-    //        commandProperties = {
-    //                @HystrixProperty(name="execution.isolation.strategy", value="SEMAPHORE")
-    //        }
-   // )
+    @HystrixCommand(fallbackMethod = "updatebooksbyisbnFromFallback",
+            commandProperties = {
+                    @HystrixProperty(name="execution.isolation.strategy", value="SEMAPHORE")
+            }
+    )
     public Object updatebookbyisbninbookms(@PathVariable Integer isbn,@RequestBody Book book) {
         LOGGER.info("Calling books Microservice - To Update a book by isbn");
-        restTemplate.put("http://bookms/updatebooksbyisbn/{isbn}",book,isbn);
+        restTemplate.put("http:bookms/updatebooksbyisbn/{isbn}",book,isbn);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
@@ -83,7 +83,7 @@ public class BookmsClientResource {
     )
     public Object deletebooksByIdFrombookms(@PathVariable Integer id) {
         LOGGER.info("Calling books Microservice - To Delete book by Id");
-        restTemplate.delete("http://bookms/books/"+id,Object.class);
+        restTemplate.delete("http:bookms/books/"+id,Object.class);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
@@ -95,12 +95,12 @@ public class BookmsClientResource {
     )
     public Object getbooksByIsbnFrombookms(@PathVariable String isbn) {
         LOGGER.info("Calling books Microservice - To Get book by ISBN");
-        return restTemplate.getForObject("http://bookms/booksbyisbn/{isbn}", Object.class,isbn);
+        return restTemplate.getForObject("http:bookms/booksbyisbn/{isbn}", Object.class,isbn);
     }
 
 
 
-    //Fall Back Methods
+    Fall Back Methods
 
     private Object getBooksFromFallback() {
         LOGGER.error("Circuit Breaker Invoked");
